@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "ts4-featured-image-base-refresh.png.adapt.crop191x100.1200w.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

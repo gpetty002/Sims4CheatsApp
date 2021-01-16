@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BX9-rN-1YB">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--SearchViewController-->
+        <scene sceneID="doq-EB-lgJ">
+            <objects>
+                <viewController id="Fvk-w6-JJM" userLabel="SearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qa8-i6-8Sl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nzu-fE-Aqe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="6aj-dn-b7c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NnC-1e-RiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2013" y="1041"/>
+        </scene>
+        <!--Selection Tab Bar Controller-->
+        <scene sceneID="uMS-tP-o2e">
+            <objects>
+                <tabBarController id="BX9-rN-1YB" customClass="SelectionTabBarController" customModule="Sims4CheatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1aT-Gx-m21">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1289717853" green="0.23208689690000001" blue="0.34903386240000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Ciy-b5-Szc"/>
+                        <segue destination="Fvk-w6-JJM" kind="relationship" relationship="viewControllers" id="Mwa-Io-Fa6"/>
+                        <segue destination="kEM-DU-RXx" kind="relationship" relationship="viewControllers" id="Jlo-v5-R7o"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5WK-n0-ZZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3120" y="281"/>
+        </scene>
+        <!--Featured-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="FeaturedViewController" customModule="Sims4CheatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktB-Jk-tlL">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B5o-Ec-YT3">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1250"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dd-ou-0y2" userLabel="FeaturedView">
+                                                <rect key="frame" x="0.0" y="0.0" width="600" height="380"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="les-sims-4-png-5" translatesAutoresizingMaskIntoConstraints="NO" id="03J-As-IpX">
+                                                        <rect key="frame" x="0.0" y="35" width="414" height="287"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="414" id="l5I-L2-0ME"/>
+                                                            <constraint firstAttribute="height" constant="287" id="nm3-me-eS1"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Featured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcn-WP-U4Y">
+                                                        <rect key="frame" x="0.0" y="322" width="600" height="60"/>
+                                                        <color key="backgroundColor" red="0.15103108363892712" green="0.23267895852223661" blue="0.34127141497461932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="uQi-Ht-wSh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="03J-As-IpX" firstAttribute="leading" secondItem="8dd-ou-0y2" secondAttribute="leading" id="55Z-VS-4EK"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Gcn-WP-U4Y" secondAttribute="trailing" id="Dl6-nS-itT"/>
+                                                    <constraint firstItem="Gcn-WP-U4Y" firstAttribute="top" secondItem="03J-As-IpX" secondAttribute="bottom" id="XQX-OX-2zx"/>
+                                                    <constraint firstItem="Gcn-WP-U4Y" firstAttribute="leading" secondItem="8dd-ou-0y2" secondAttribute="leading" id="eii-9F-P1T"/>
+                                                    <constraint firstItem="03J-As-IpX" firstAttribute="top" secondItem="8dd-ou-0y2" secondAttribute="top" constant="35" id="tGV-U6-BCd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="03J-As-IpX" secondAttribute="trailing" id="z8J-4Q-fmJ"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmx-lo-pvr" userLabel="SkillCheatsSect">
+                                                <rect key="frame" x="0.0" y="380" width="600" height="388"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14" translatesAutoresizingMaskIntoConstraints="NO" id="IC9-K3-7fG">
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="185"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="185" id="nU8-bh-dIi"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joW-tC-5UD">
+                                                        <rect key="frame" x="0.0" y="185" width="600" height="60"/>
+                                                        <color key="backgroundColor" red="0.15103108363892712" green="0.23267895852223661" blue="0.34127141497461932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="fc1-tE-3LA"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                                        <state key="normal" title="    Skills Cheats">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="skillCheatsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y68-j8-Zg4"/>
+                                                            <segue destination="yK3-No-Xg5" kind="show" identifier="goToSkills" id="iS6-Fh-L9Y"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpa-NC-wTj">
+                                                        <rect key="frame" x="15" y="245" width="570" height="129"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="129" id="mjD-Cd-vWs"/>
+                                                        </constraints>
+                                                        <string key="text">Stop burning your house down and cheat your way through the cooking skill! Don't want to disturb your household with your terrible piano plaiying? We have a cheat for that skill too. Click the Skills Cheats banner!</string>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Cpa-NC-wTj" secondAttribute="trailing" constant="15" id="93N-ZA-cvV"/>
+                                                    <constraint firstItem="IC9-K3-7fG" firstAttribute="top" secondItem="tmx-lo-pvr" secondAttribute="top" id="9WO-CP-BQB"/>
+                                                    <constraint firstItem="IC9-K3-7fG" firstAttribute="leading" secondItem="tmx-lo-pvr" secondAttribute="leading" id="BRA-Ms-5BB"/>
+                                                    <constraint firstItem="Cpa-NC-wTj" firstAttribute="top" secondItem="joW-tC-5UD" secondAttribute="bottom" id="DYx-Ad-aM3"/>
+                                                    <constraint firstAttribute="trailing" secondItem="IC9-K3-7fG" secondAttribute="trailing" id="PNW-xb-Gw6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="joW-tC-5UD" secondAttribute="trailing" id="d8r-9K-Rg3"/>
+                                                    <constraint firstItem="joW-tC-5UD" firstAttribute="top" secondItem="IC9-K3-7fG" secondAttribute="bottom" id="eIj-ag-0yC"/>
+                                                    <constraint firstItem="joW-tC-5UD" firstAttribute="leading" secondItem="tmx-lo-pvr" secondAttribute="leading" id="ecF-ku-xOU"/>
+                                                    <constraint firstItem="Cpa-NC-wTj" firstAttribute="leading" secondItem="tmx-lo-pvr" secondAttribute="leading" constant="15" id="yfW-ee-zCw"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zf0-38-hnc" userLabel="CareerSect">
+                                                <rect key="frame" x="0.0" y="768" width="600" height="482"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="581112900" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-dM-DRe">
+                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="185"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="185" id="Tzn-a3-ck8"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CH-cm-AE5">
+                                                        <rect key="frame" x="0.0" y="185" width="600" height="60"/>
+                                                        <color key="backgroundColor" red="0.15103108363892712" green="0.23267895852223661" blue="0.34127141497461932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="xZH-B5-KdZ"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                                        <state key="normal" title="    Career Cheats">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="careerCheatsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E7v-pK-RLf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cix-fX-32c">
+                                                        <rect key="frame" x="15" y="245" width="570" height="128"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="128" id="ZW1-lg-ET0"/>
+                                                        </constraints>
+                                                        <string key="text">Bugs, glitches, annoying sub tasks. Whatever your reason, we got you covered with career cheats. Be that business tycoon, supervillian, or famous actor. Click the Career Cheats banner!</string>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="qqS-dM-DRe" secondAttribute="trailing" id="7qR-Bw-Onl"/>
+                                                    <constraint firstItem="cix-fX-32c" firstAttribute="leading" secondItem="Zf0-38-hnc" secondAttribute="leading" constant="15" id="9R9-36-v3u"/>
+                                                    <constraint firstItem="qqS-dM-DRe" firstAttribute="top" secondItem="Zf0-38-hnc" secondAttribute="top" id="GzB-hj-1d4"/>
+                                                    <constraint firstItem="cix-fX-32c" firstAttribute="top" secondItem="1CH-cm-AE5" secondAttribute="bottom" id="Hb3-bM-aTm"/>
+                                                    <constraint firstItem="1CH-cm-AE5" firstAttribute="top" secondItem="qqS-dM-DRe" secondAttribute="bottom" id="KcX-aX-i0E"/>
+                                                    <constraint firstAttribute="trailing" secondItem="1CH-cm-AE5" secondAttribute="trailing" id="MP0-NU-40g"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cix-fX-32c" secondAttribute="trailing" constant="15" id="aRU-MJ-iMa"/>
+                                                    <constraint firstItem="qqS-dM-DRe" firstAttribute="leading" secondItem="Zf0-38-hnc" secondAttribute="leading" id="tK7-ue-b55"/>
+                                                    <constraint firstItem="1CH-cm-AE5" firstAttribute="leading" secondItem="Zf0-38-hnc" secondAttribute="leading" id="xsL-ua-s6t"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8dd-ou-0y2" firstAttribute="leading" secondItem="B5o-Ec-YT3" secondAttribute="leading" id="8nJ-ya-1AY"/>
+                                            <constraint firstItem="tmx-lo-pvr" firstAttribute="top" secondItem="B5o-Ec-YT3" secondAttribute="top" constant="380" id="CZr-fj-eLP"/>
+                                            <constraint firstItem="Zf0-38-hnc" firstAttribute="top" secondItem="tmx-lo-pvr" secondAttribute="bottom" id="GNZ-i0-SQy"/>
+                                            <constraint firstItem="tmx-lo-pvr" firstAttribute="top" secondItem="8dd-ou-0y2" secondAttribute="bottom" id="Hzi-VF-2kc"/>
+                                            <constraint firstItem="Zf0-38-hnc" firstAttribute="top" secondItem="B5o-Ec-YT3" secondAttribute="top" constant="768" id="NHS-ZQ-908"/>
+                                            <constraint firstAttribute="trailing" secondItem="8dd-ou-0y2" secondAttribute="trailing" id="cNK-8s-Ynu"/>
+                                            <constraint firstItem="tmx-lo-pvr" firstAttribute="leading" secondItem="B5o-Ec-YT3" secondAttribute="leading" id="cpc-1Q-dCZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="tmx-lo-pvr" secondAttribute="trailing" id="hY6-JL-C8M"/>
+                                            <constraint firstItem="Zf0-38-hnc" firstAttribute="leading" secondItem="B5o-Ec-YT3" secondAttribute="leading" id="jw0-jT-hoj"/>
+                                            <constraint firstAttribute="trailing" secondItem="Zf0-38-hnc" secondAttribute="trailing" id="mM1-OY-F73"/>
+                                            <constraint firstItem="8dd-ou-0y2" firstAttribute="top" secondItem="B5o-Ec-YT3" secondAttribute="top" id="pf0-rx-4JJ"/>
+                                            <constraint firstAttribute="height" constant="1250" id="unp-Zh-xlQ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2097497002" green="0.32080820069999999" blue="0.46666798860000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="B5o-Ec-YT3" firstAttribute="bottom" secondItem="Hki-Mh-y4L" secondAttribute="bottom" id="BpC-5M-FlV"/>
+                                    <constraint firstItem="B5o-Ec-YT3" firstAttribute="top" secondItem="Hki-Mh-y4L" secondAttribute="top" id="Cfh-FG-cZG"/>
+                                    <constraint firstItem="B5o-Ec-YT3" firstAttribute="leading" secondItem="Hki-Mh-y4L" secondAttribute="leading" id="ez4-61-Mu8"/>
+                                    <constraint firstItem="B5o-Ec-YT3" firstAttribute="trailing" secondItem="Hki-Mh-y4L" secondAttribute="trailing" id="oUy-i2-WHx"/>
+                                    <constraint firstItem="B5o-Ec-YT3" firstAttribute="width" secondItem="ecl-LW-bzu" secondAttribute="width" id="uqI-8L-M3Q"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Hki-Mh-y4L"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ecl-LW-bzu"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.20784313725490194" green="0.32156862745098036" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ktB-Jk-tlL" secondAttribute="bottom" id="OML-oR-hyu"/>
+                            <constraint firstAttribute="trailing" secondItem="ktB-Jk-tlL" secondAttribute="trailing" id="YFL-Rr-3DJ"/>
+                            <constraint firstItem="ktB-Jk-tlL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k2M-E3-emm"/>
+                            <constraint firstItem="ktB-Jk-tlL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oKT-wv-UV7"/>
+                            <constraint firstItem="ktB-Jk-tlL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qwZ-gi-ySh"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Featured" image="list.star" catalog="system" selectedImage="list.star" id="Ef6-9u-25h">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="featuredLabel" destination="Gcn-WP-U4Y" id="sYV-be-XER"/>
+                        <segue destination="Fcs-Cz-7kw" kind="show" identifier="goToCareers" id="Eal-CO-c69"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4646" y="1041"/>
+        </scene>
+        <!--Careers View Controller-->
+        <scene sceneID="he2-g1-i8d">
+            <objects>
+                <tableViewController modalPresentationStyle="fullScreen" interfaceStyle="light" id="S54-KT-QIA" customClass="CareersViewController" customModule="Sims4CheatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="U6S-FK-wqj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CareerCell" id="uly-fH-uvD">
+                                <rect key="frame" x="0.0" y="28" width="600" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uly-fH-uvD" id="Kyn-8F-VRh">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="S54-KT-QIA" id="v3A-D6-jCF"/>
+                            <outlet property="delegate" destination="S54-KT-QIA" id="gNT-yv-OX4"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="QWI-0Q-B4Y"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DQ5-nJ-0FF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3119" y="1760"/>
+        </scene>
+        <!--SkillsTableViewController-->
+        <scene sceneID="ERr-B7-0hP">
+            <objects>
+                <tableViewController modalPresentationStyle="fullScreen" id="C6n-vN-RZv" userLabel="SkillsTableViewController" customClass="SkillsTableViewController" customModule="Sims4CheatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wR9-Pi-Xft">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SkillCell" id="lgF-u6-KL9">
+                                <rect key="frame" x="0.0" y="28" width="600" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lgF-u6-KL9" id="zIo-vC-lmK">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="C6n-vN-RZv" id="6NN-cL-B5S"/>
+                            <outlet property="delegate" destination="C6n-vN-RZv" id="n39-pm-zXG"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="LjD-0o-cFo"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="429-Yy-jix" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4710" y="1760"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="06r-0b-AWG">
+            <objects>
+                <tableViewController id="qQF-ev-Cm1" customClass="BookmarksTableViewController" customModule="Sims4CheatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tmd-Od-s2u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarkCell" id="tIN-u5-UuD">
+                                <rect key="frame" x="0.0" y="28" width="600" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tIN-u5-UuD" id="OFU-1y-WK0">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="qQF-ev-Cm1" id="RK1-Fl-b18"/>
+                            <outlet property="delegate" destination="qQF-ev-Cm1" id="HzI-OE-sbj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="TxF-GH-WGi"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVR-XU-Y5v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368" y="1041"/>
+        </scene>
+        <!--BookmarksNav-->
+        <scene sceneID="P6D-wl-sYq">
+            <objects>
+                <navigationController id="kEM-DU-RXx" userLabel="BookmarksNav" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="bookmark.fill" catalog="system" selectedImage="bookmark.fill" id="ob7-cf-QOt"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Nk4-5T-hc3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qQF-ev-Cm1" kind="relationship" relationship="rootViewController" id="dd8-f5-PtW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PqI-h6-8Wf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1167" y="1041"/>
+        </scene>
+        <!--SkllNav-->
+        <scene sceneID="ucs-ZN-mw7">
+            <objects>
+                <navigationController modalPresentationStyle="fullScreen" id="yK3-No-Xg5" userLabel="SkllNav" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jfG-Uq-lYa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vzj-ri-nI3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="C6n-vN-RZv" kind="relationship" relationship="rootViewController" id="lCd-XW-bLR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mL-sU-hz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5467" y="1760"/>
+        </scene>
+        <!--CareerNav-->
+        <scene sceneID="hXM-aq-RIa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="Fcs-Cz-7kw" userLabel="CareerNav" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="dPv-fY-Lur">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S54-KT-QIA" kind="relationship" relationship="rootViewController" id="BLZ-aB-0uR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K5P-Zw-xFb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3938" y="1760"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="14" width="389" height="272"/>
+        <image name="581112900" width="720" height="392"/>
+        <image name="bookmark.fill" catalog="system" width="112" height="128"/>
+        <image name="les-sims-4-png-5" width="955" height="466"/>
+        <image name="list.star" catalog="system" width="128" height="94"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,394 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39876E9F25947403008264C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39876E9E25947403008264C0 /* AppDelegate.swift */; };
+		39876EA125947403008264C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39876EA025947403008264C0 /* SceneDelegate.swift */; };
+		39876EA325947403008264C0 /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39876EA225947403008264C0 /* FeaturedViewController.swift */; };
+		39876EA625947403008264C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39876EA425947403008264C0 /* Main.storyboard */; };
+		39876EA825947405008264C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39876EA725947405008264C0 /* Assets.xcassets */; };
+		39876EAB25947405008264C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39876EA925947405008264C0 /* LaunchScreen.storyboard */; };
+		398D63D525A83C1C00D71F08 /* SkillsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398D63D425A83C1C00D71F08 /* SkillsTableViewController.swift */; };
+		398D63D825A846DA00D71F08 /* SkillsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398D63D725A846DA00D71F08 /* SkillsCellController.swift */; };
+		39B74E9825A96A1300364BB9 /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B74E9725A96A1300364BB9 /* BookmarksTableViewController.swift */; };
+		39B74E9C25A986FB00364BB9 /* BookmarksCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B74E9B25A986FB00364BB9 /* BookmarksCellController.swift */; };
+		39D869DA25A5A882006A5C7C /* CareersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D869D925A5A882006A5C7C /* CareersViewController.swift */; };
+		39D869DE25A6644E006A5C7C /* ExpandableCheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D869DD25A6644E006A5C7C /* ExpandableCheats.swift */; };
+		39D869E225A6DB0E006A5C7C /* CareerCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D869E125A6DB0E006A5C7C /* CareerCellController.swift */; };
+		39DAB08025ABFF5A00CBB2A7 /* SelectionTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DAB07F25ABFF5A00CBB2A7 /* SelectionTabBarController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		39876E9B25947403008264C0 /* Sims4CheatsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sims4CheatsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39876E9E25947403008264C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		39876EA025947403008264C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		39876EA225947403008264C0 /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
+		39876EA525947403008264C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		39876EA725947405008264C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		39876EAA25947405008264C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		39876EAC25947405008264C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		398D63D425A83C1C00D71F08 /* SkillsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsTableViewController.swift; sourceTree = "<group>"; };
+		398D63D725A846DA00D71F08 /* SkillsCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCellController.swift; sourceTree = "<group>"; };
+		39B74E9725A96A1300364BB9 /* BookmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewController.swift; sourceTree = "<group>"; };
+		39B74E9B25A986FB00364BB9 /* BookmarksCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksCellController.swift; sourceTree = "<group>"; };
+		39D869D925A5A882006A5C7C /* CareersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareersViewController.swift; sourceTree = "<group>"; };
+		39D869DD25A6644E006A5C7C /* ExpandableCheats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCheats.swift; sourceTree = "<group>"; };
+		39D869E125A6DB0E006A5C7C /* CareerCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerCellController.swift; sourceTree = "<group>"; };
+		39DAB07F25ABFF5A00CBB2A7 /* SelectionTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTabBarController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39876E9825947403008264C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		392E465025A465710014A69D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				39DAB07F25ABFF5A00CBB2A7 /* SelectionTabBarController.swift */,
+				39876EA225947403008264C0 /* FeaturedViewController.swift */,
+				39D869D925A5A882006A5C7C /* CareersViewController.swift */,
+				39D869E125A6DB0E006A5C7C /* CareerCellController.swift */,
+				398D63D425A83C1C00D71F08 /* SkillsTableViewController.swift */,
+				398D63D725A846DA00D71F08 /* SkillsCellController.swift */,
+				39B74E9725A96A1300364BB9 /* BookmarksTableViewController.swift */,
+				39B74E9B25A986FB00364BB9 /* BookmarksCellController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		39876E9225947403008264C0 = {
+			isa = PBXGroup;
+			children = (
+				39876E9D25947403008264C0 /* Sims4CheatsApp */,
+				39876E9C25947403008264C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39876E9C25947403008264C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39876E9B25947403008264C0 /* Sims4CheatsApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39876E9D25947403008264C0 /* Sims4CheatsApp */ = {
+			isa = PBXGroup;
+			children = (
+				39D869DC25A66437006A5C7C /* Models */,
+				392E465025A465710014A69D /* Controllers */,
+				39876E9E25947403008264C0 /* AppDelegate.swift */,
+				39876EA025947403008264C0 /* SceneDelegate.swift */,
+				39876EA425947403008264C0 /* Main.storyboard */,
+				39876EA725947405008264C0 /* Assets.xcassets */,
+				39876EA925947405008264C0 /* LaunchScreen.storyboard */,
+				39876EAC25947405008264C0 /* Info.plist */,
+			);
+			path = Sims4CheatsApp;
+			sourceTree = "<group>";
+		};
+		39D869DC25A66437006A5C7C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				39D869DD25A6644E006A5C7C /* ExpandableCheats.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39876E9A25947403008264C0 /* Sims4CheatsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39876EAF25947405008264C0 /* Build configuration list for PBXNativeTarget "Sims4CheatsApp" */;
+			buildPhases = (
+				39876E9725947403008264C0 /* Sources */,
+				39876E9825947403008264C0 /* Frameworks */,
+				39876E9925947403008264C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sims4CheatsApp;
+			productName = Sims4CheatsApp;
+			productReference = 39876E9B25947403008264C0 /* Sims4CheatsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39876E9325947403008264C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					39876E9A25947403008264C0 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 39876E9625947403008264C0 /* Build configuration list for PBXProject "Sims4CheatsApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 39876E9225947403008264C0;
+			productRefGroup = 39876E9C25947403008264C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39876E9A25947403008264C0 /* Sims4CheatsApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39876E9925947403008264C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39876EAB25947405008264C0 /* LaunchScreen.storyboard in Resources */,
+				39876EA825947405008264C0 /* Assets.xcassets in Resources */,
+				39876EA625947403008264C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39876E9725947403008264C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39876EA325947403008264C0 /* FeaturedViewController.swift in Sources */,
+				39DAB08025ABFF5A00CBB2A7 /* SelectionTabBarController.swift in Sources */,
+				39876E9F25947403008264C0 /* AppDelegate.swift in Sources */,
+				39D869DA25A5A882006A5C7C /* CareersViewController.swift in Sources */,
+				398D63D525A83C1C00D71F08 /* SkillsTableViewController.swift in Sources */,
+				39876EA125947403008264C0 /* SceneDelegate.swift in Sources */,
+				39B74E9825A96A1300364BB9 /* BookmarksTableViewController.swift in Sources */,
+				39B74E9C25A986FB00364BB9 /* BookmarksCellController.swift in Sources */,
+				39D869E225A6DB0E006A5C7C /* CareerCellController.swift in Sources */,
+				39D869DE25A6644E006A5C7C /* ExpandableCheats.swift in Sources */,
+				398D63D825A846DA00D71F08 /* SkillsCellController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		39876EA425947403008264C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39876EA525947403008264C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		39876EA925947405008264C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39876EAA25947405008264C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		39876EAD25947405008264C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		39876EAE25947405008264C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39876EB025947405008264C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AX9X8TR9H5;
+				INFOPLIST_FILE = Sims4CheatsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pettyg.Sims4CheatsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		39876EB125947405008264C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = AX9X8TR9H5;
+				INFOPLIST_FILE = Sims4CheatsApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.pettyg.Sims4CheatsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39876E9625947403008264C0 /* Build configuration list for PBXProject "Sims4CheatsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39876EAD25947405008264C0 /* Debug */,
+				39876EAE25947405008264C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39876EAF25947405008264C0 /* Build configuration list for PBXNativeTarget "Sims4CheatsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39876EB025947405008264C0 /* Debug */,
+				39876EB125947405008264C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39876E9325947403008264C0 /* Project object */;
+}
