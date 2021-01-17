@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BX9-rN-1YB">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -7,21 +8,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--SearchViewController-->
-        <scene sceneID="doq-EB-lgJ">
+        <!--Search Table View Controller-->
+        <scene sceneID="mic-ut-GXi">
             <objects>
-                <viewController id="Fvk-w6-JJM" userLabel="SearchViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qa8-i6-8Sl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableViewController id="A2m-kY-wej" customClass="SearchTableViewController" customModule="Sims4CheatsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="SkY-ww-VQe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="nzu-fE-Aqe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="6aj-dn-b7c"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NnC-1e-RiF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="play with life..." id="YAa-dS-QSB">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="barTintColor" red="0.1592154801" green="0.23249387739999999" blue="0.33726781610000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="kkc-vn-yTi">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kkc-vn-yTi" id="tqq-K1-1PO">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="A2m-kY-wej" id="jvY-oN-xCf"/>
+                            <outlet property="delegate" destination="A2m-kY-wej" id="R1J-TG-Cjc"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="kjG-Fh-a13"/>
+                    <connections>
+                        <outlet property="searchBar" destination="YAa-dS-QSB" id="haq-ea-bSW"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mJL-aB-Dl9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2013" y="1041"/>
+            <point key="canvasLocation" x="-2062" y="1041"/>
         </scene>
         <!--Selection Tab Bar Controller-->
         <scene sceneID="uMS-tP-o2e">
@@ -35,30 +60,30 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Ciy-b5-Szc"/>
-                        <segue destination="Fvk-w6-JJM" kind="relationship" relationship="viewControllers" id="Mwa-Io-Fa6"/>
-                        <segue destination="kEM-DU-RXx" kind="relationship" relationship="viewControllers" id="Jlo-v5-R7o"/>
+                        <segue destination="A2m-kY-wej" kind="relationship" relationship="viewControllers" id="qc1-8D-3N2"/>
+                        <segue destination="kEM-DU-RXx" kind="relationship" relationship="viewControllers" id="dCB-K7-BgY"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5WK-n0-ZZj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3120" y="281"/>
+            <point key="canvasLocation" x="-3343" y="308"/>
         </scene>
         <!--Featured-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="FeaturedViewController" customModule="Sims4CheatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktB-Jk-tlL">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="B5o-Ec-YT3">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="1250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1250"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dd-ou-0y2" userLabel="FeaturedView">
-                                                <rect key="frame" x="0.0" y="0.0" width="600" height="380"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="380"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="les-sims-4-png-5" translatesAutoresizingMaskIntoConstraints="NO" id="03J-As-IpX">
                                                         <rect key="frame" x="0.0" y="35" width="414" height="287"/>
@@ -68,7 +93,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Featured" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcn-WP-U4Y">
-                                                        <rect key="frame" x="0.0" y="322" width="600" height="60"/>
+                                                        <rect key="frame" x="0.0" y="322" width="414" height="60"/>
                                                         <color key="backgroundColor" red="0.15103108363892712" green="0.23267895852223661" blue="0.34127141497461932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="uQi-Ht-wSh"/>
@@ -88,16 +113,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmx-lo-pvr" userLabel="SkillCheatsSect">
-                                                <rect key="frame" x="0.0" y="380" width="600" height="388"/>
+                                                <rect key="frame" x="0.0" y="380" width="414" height="388"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="14" translatesAutoresizingMaskIntoConstraints="NO" id="IC9-K3-7fG">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="185"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="185" id="nU8-bh-dIi"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joW-tC-5UD">
-                                                        <rect key="frame" x="0.0" y="185" width="600" height="60"/>
+                                                        <rect key="frame" x="0.0" y="185" width="414" height="60"/>
                                                         <color key="backgroundColor" red="0.15103108363892712" green="0.23267895852223661" blue="0.34127141497461932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="fc1-tE-3LA"/>
@@ -112,7 +137,7 @@
                                                         </connections>
                                                     </button>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cpa-NC-wTj">
-                                                        <rect key="frame" x="15" y="245" width="570" height="129"/>
+                                                        <rect key="frame" x="15" y="245" width="384" height="129"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="129" id="mjD-Cd-vWs"/>
                                                         </constraints>
@@ -135,16 +160,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zf0-38-hnc" userLabel="CareerSect">
-                                                <rect key="frame" x="0.0" y="768" width="600" height="482"/>
+                                                <rect key="frame" x="0.0" y="768" width="414" height="482"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="581112900" translatesAutoresizingMaskIntoConstraints="NO" id="qqS-dM-DRe">
-                                                        <rect key="frame" x="0.0" y="0.0" width="600" height="185"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="185"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="185" id="Tzn-a3-ck8"/>
                                                         </constraints>
                                                     </imageView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1CH-cm-AE5">
-                                                        <rect key="frame" x="0.0" y="185" width="600" height="60"/>
+                                                        <rect key="frame" x="0.0" y="185" width="414" height="60"/>
                                                         <color key="backgroundColor" red="0.15103108363892712" green="0.23267895852223661" blue="0.34127141497461932" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="60" id="xZH-B5-KdZ"/>
@@ -158,7 +183,7 @@
                                                         </connections>
                                                     </button>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cix-fX-32c">
-                                                        <rect key="frame" x="15" y="245" width="570" height="128"/>
+                                                        <rect key="frame" x="15" y="245" width="384" height="128"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="128" id="ZW1-lg-ET0"/>
                                                         </constraints>
@@ -236,16 +261,16 @@
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" interfaceStyle="light" id="S54-KT-QIA" customClass="CareersViewController" customModule="Sims4CheatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="U6S-FK-wqj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CareerCell" id="uly-fH-uvD">
-                                <rect key="frame" x="0.0" y="28" width="600" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uly-fH-uvD" id="Kyn-8F-VRh">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -267,15 +292,15 @@
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="C6n-vN-RZv" userLabel="SkillsTableViewController" customClass="SkillsTableViewController" customModule="Sims4CheatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="wR9-Pi-Xft">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SkillCell" id="lgF-u6-KL9">
-                                <rect key="frame" x="0.0" y="28" width="600" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lgF-u6-KL9" id="zIo-vC-lmK">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -296,16 +321,16 @@
             <objects>
                 <tableViewController id="qQF-ev-Cm1" customClass="BookmarksTableViewController" customModule="Sims4CheatsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tmd-Od-s2u">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarkCell" id="tIN-u5-UuD">
-                                <rect key="frame" x="0.0" y="28" width="600" height="43.5"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tIN-u5-UuD" id="OFU-1y-WK0">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

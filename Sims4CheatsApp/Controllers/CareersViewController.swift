@@ -12,10 +12,11 @@ protocol CareersViewDelegate: class {
 }
 
 class CareersViewController: UITableViewController {
-     
+    
     let cellId = "cellId"
     let mainBlueColor = UIColor(red: 0.21, green: 0.32, blue: 0.47, alpha: 1.00)
-    weak var careersDelegate: CareersViewDelegate?
+    
+//    weak var careersDelegate: CareersViewDelegate?
     var bookmarks: [Cheat] = []
     
     
@@ -93,9 +94,10 @@ class CareersViewController: UITableViewController {
     }
     
     @IBAction func closeCareers (_ sender: UIButton) {
-        careersDelegate?.saveBookmark(bookmarks)
+//        careersDelegate?.saveBookmark(bookmarks)
+//
+        NotificationCenter.default.post(name: BookmarksTableViewController.careersCheats, object: bookmarks)
         
-        print("\(careersDelegate?.saveBookmark(bookmarks))")
         dismiss(animated: true, completion: nil)
     }
     
@@ -176,7 +178,7 @@ class CareersViewController: UITableViewController {
         cell.backgroundColor = mainBlueColor
         
         cell.textLabel?.textColor = .white
-        cell.textLabel?.font = UIFont(name: "Helvetica", size: 18)
+        cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 18)
         
         cell.link = self
         

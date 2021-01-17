@@ -15,6 +15,16 @@ class BookmarksTableViewController: UITableViewController {
     
     let mainBlueColor =  UIColor(red: 0.21, green: 0.32, blue: 0.47, alpha: 1.00)
     
+    func setBookmarks(bookmarks: [Cheat]?){
+        
+        self.bookmarks!.append(contentsOf: bookmarks!)
+        
+        self.tableView.reloadData()
+    }
+    
+    static let careersCheats = Notification.Name("careerCheats")
+    static let skillCheats = Notification.Name("skillCheats")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,18 +42,74 @@ class BookmarksTableViewController: UITableViewController {
         
     }
     
+    required init? (coder: NSCoder) {
+        super.init(coder: coder)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(onCareersReceived), name: BookmarksTableViewController.careersCheats, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(onSkillsReceived), name: BookmarksTableViewController.skillCheats, object: nil)
+    }
+    
+    init() {
+        super.init(style: .plain)
+    }
+    
+    @objc func onCareersReceived(notification:Notification) {
+        
+        setBookmarks(bookmarks: notification.object as? [Cheat])
+        
+    }
+    
+    
+    @objc func onSkillsReceived(notification:Notification) {
+        
+        setBookmarks(bookmarks: notification.object as? [Cheat])
+        
+    }
+    
     func methodForBookmarks(cell: UITableViewCell) {
         
+        
+        
+        
         let indexPathTapped = tableView.indexPath(for: cell)
-        let bookmarkName = bookmarks?[indexPathTapped!.section]
-        let hasFavorited = bookmarkName?.hasFavorited
+        let bookmark = bookmarks?[indexPathTapped!.section]
+//        let bookmarkName = bookmark?.name
         
-        bookmarks?[indexPathTapped!.section].hasFavorited = !(hasFavorited ?? true)
+        let hasFavorited = bookmark?.hasFavorited
         
-        cell.accessoryView?.tintColor = hasFavorited! ? .white : UIColor(red: 0.52, green: 0.07, blue: 0.07, alpha: 1.00)
+        bookmarks?[indexPathTapped!.section].hasFavorited = !hasFavorited!
+        
+        
+        cell.accessoryView?.tintColor = hasFavorited! ? UIColor(red: 0.52, green: 0.07, blue: 0.07, alpha: 1.00) : .white
+        
+        
+        
+//        if !hasFavorited! {
+//            let index = bookmarks?.firstIndex{ $0.name == bookmarkName}
+//            if let index = index {
+//                bookmarks?.remove(at: index)
+//            }
+//        }
+        
     }
 
     // MARK: - Table view data source
+    
+    override func tableView (_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let button = UIButton(type: .system)
+        
+        button.titleLabel?.font = UIFont(name: "Helvetica-bold", size: 24)
+        button.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
+        
+        
+        button.backgroundColor = UIColor.white
+        
+        button.tag = section
+        
+        return button
+    }
     
     override func tableView (_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 45
@@ -74,9 +140,12 @@ class BookmarksTableViewController: UITableViewController {
         
         cell.link = self
         
-        let bookmark = bookmarks?[indexPath.section]
+        let bookmark = bookmarks?[indexPath.row]
+        
         
         cell.textLabel?.text = bookmark?.name
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.font = UIFont(name: "Helvetica", size: 18)
         
         let checkText = cell.textLabel?.text
         

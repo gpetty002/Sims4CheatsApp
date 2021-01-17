@@ -16,6 +16,7 @@ struct ExpandableCheats {
     func getFavorites() -> [Cheat] {
         return names
     }
+    
 }
 
 
@@ -23,4 +24,8 @@ struct ExpandableCheats {
 struct Cheat {
     let name: String
     var hasFavorited: Bool
+    
+    func match(string: String) -> Bool {
+        return name.contains(string)
+    }
 }

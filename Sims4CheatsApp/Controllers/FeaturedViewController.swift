@@ -11,26 +11,26 @@ protocol SendBookmarksToTabController: class {
     func shareBookmarks(bookmarks: [Cheat])
 }
 
-class FeaturedViewController: UIViewController, CareersViewDelegate {
+
+
+class FeaturedViewController: UIViewController {
 
     @IBOutlet weak var featuredLabel: UILabel!
-    weak var transferBookmarksDelegate: SendBookmarksToTabController?
-    weak var careerDelegate: CareersViewDelegate?
+    
+//    weak var transferBookmarksDelegate: SendBookmarksToTabController?
+//    weak var careerDelegate: CareersViewDelegate?
     
     
     var favorites: [Cheat]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.careerDelegate = self
     
     }
     
-    func saveBookmark(_ bookmarks: [Cheat]) {
-        transferBookmarksDelegate?.shareBookmarks(bookmarks: bookmarks)
-        print("\(bookmarks)")
-    }
+//    func saveBookmark(_ bookmarks: [Cheat]) {
+//        transferBookmarksDelegate?.shareBookmarks(bookmarks: bookmarks)
+//    }
     
     
     @IBAction func skillCheatsButton(_ sender: UIButton) {
@@ -51,8 +51,11 @@ class FeaturedViewController: UIViewController, CareersViewDelegate {
                 _ = segue.destination as! SkillsTableViewController
             }
         } else if segue.identifier == "goToCareers" {
-            if (sender as? UITableViewController) != nil {
-                _ = segue.destination as! CareersViewController
+            
+            if let navController = segue.destination as? UINavigationController {
+                if (navController.viewControllers.first as? CareersViewController) != nil {
+//                    careersViewController.careersDelegate = self
+                }
             }
             
         } 

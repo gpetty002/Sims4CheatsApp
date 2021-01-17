@@ -17,6 +17,7 @@
 		398D63D825A846DA00D71F08 /* SkillsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 398D63D725A846DA00D71F08 /* SkillsCellController.swift */; };
 		39B74E9825A96A1300364BB9 /* BookmarksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B74E9725A96A1300364BB9 /* BookmarksTableViewController.swift */; };
 		39B74E9C25A986FB00364BB9 /* BookmarksCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B74E9B25A986FB00364BB9 /* BookmarksCellController.swift */; };
+		39B80BBD25B4336C00B473F8 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39B80BBC25B4336C00B473F8 /* SearchTableViewController.swift */; };
 		39D869DA25A5A882006A5C7C /* CareersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D869D925A5A882006A5C7C /* CareersViewController.swift */; };
 		39D869DE25A6644E006A5C7C /* ExpandableCheats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D869DD25A6644E006A5C7C /* ExpandableCheats.swift */; };
 		39D869E225A6DB0E006A5C7C /* CareerCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D869E125A6DB0E006A5C7C /* CareerCellController.swift */; };
@@ -36,6 +37,7 @@
 		398D63D725A846DA00D71F08 /* SkillsCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsCellController.swift; sourceTree = "<group>"; };
 		39B74E9725A96A1300364BB9 /* BookmarksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewController.swift; sourceTree = "<group>"; };
 		39B74E9B25A986FB00364BB9 /* BookmarksCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksCellController.swift; sourceTree = "<group>"; };
+		39B80BBC25B4336C00B473F8 /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		39D869D925A5A882006A5C7C /* CareersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareersViewController.swift; sourceTree = "<group>"; };
 		39D869DD25A6644E006A5C7C /* ExpandableCheats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCheats.swift; sourceTree = "<group>"; };
 		39D869E125A6DB0E006A5C7C /* CareerCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerCellController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				39D869E125A6DB0E006A5C7C /* CareerCellController.swift */,
 				398D63D425A83C1C00D71F08 /* SkillsTableViewController.swift */,
 				398D63D725A846DA00D71F08 /* SkillsCellController.swift */,
+				39B80BBC25B4336C00B473F8 /* SearchTableViewController.swift */,
 				39B74E9725A96A1300364BB9 /* BookmarksTableViewController.swift */,
 				39B74E9B25A986FB00364BB9 /* BookmarksCellController.swift */,
 			);
@@ -186,6 +189,7 @@
 				39B74E9825A96A1300364BB9 /* BookmarksTableViewController.swift in Sources */,
 				39B74E9C25A986FB00364BB9 /* BookmarksCellController.swift in Sources */,
 				39D869E225A6DB0E006A5C7C /* CareerCellController.swift in Sources */,
+				39B80BBD25B4336C00B473F8 /* SearchTableViewController.swift in Sources */,
 				39D869DE25A6644E006A5C7C /* ExpandableCheats.swift in Sources */,
 				398D63D825A846DA00D71F08 /* SkillsCellController.swift in Sources */,
 			);

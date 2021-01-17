@@ -9,7 +9,7 @@ import UIKit
 
 class SkillsTableViewController: UITableViewController {
     
-    let skillFavorites = BookmarksTableViewController()
+    var bookmarks: [Cheat] = []
     
     let cellId = "Cell"
     let mainBlueColor = UIColor(red: 0.21, green: 0.32, blue: 0.47, alpha: 1.00)
@@ -28,7 +28,7 @@ class SkillsTableViewController: UITableViewController {
         
         
         if !hasFavorited {
-            skillFavorites.bookmarks?.append(cheatName)
+            bookmarks.append(cheatName)
             
         }
         
@@ -64,7 +64,7 @@ class SkillsTableViewController: UITableViewController {
             "stats.set_skill_level major_guitar x",
             "stats.set_skill_level major_handiness x",
             "stats.set_skill_level major_herbalism x",
-            "stats.set_skill_level major_homestylecooking x (Cooking)",
+            "stats.set_skill_level major_homestylecooking x",
             "stats.set_skill_level major_juicefizzing x",
             "stats.set_skill_level Adultminor_localculture x",
             "stats.set_skill_level major_logic x",
@@ -127,7 +127,7 @@ class SkillsTableViewController: UITableViewController {
         backButton.setImage(UIImage(systemName: "chevron.left"), for: .normal)
         backButton.setTitle("", for: .normal)
         backButton.tintColor = UIColor.white
-        backButton.addTarget(self, action: #selector(self.close(_:)), for: .touchUpInside)
+        backButton.addTarget(self, action: #selector(self.closeSkills(_:)), for: .touchUpInside)
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: backButton)
         self.navigationController?.popViewController(animated: true)
@@ -137,7 +137,10 @@ class SkillsTableViewController: UITableViewController {
         
     }
     
-    @IBAction func close (_ sender: UIButton) {
+    @IBAction func closeSkills (_ sender: UIButton) {
+        
+        NotificationCenter.default.post(name: BookmarksTableViewController.skillCheats, object: bookmarks)
+        
         self.navigationController?.dismiss(animated: true, completion: nil)
     }
     
@@ -237,8 +240,14 @@ class SkillsTableViewController: UITableViewController {
         } else if checkText!.count < 46 {
             cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 14)
         } else {
-            cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 12)
+            cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 13)
         }
+        
+        if cheatSkillName.name.contains("programming") {
+            cell.textLabel?.font = UIFont(name: "Helvetica-Bold", size: 16)
+        }
+        
+        
         
         cell.textLabel?.textColor = .white
        

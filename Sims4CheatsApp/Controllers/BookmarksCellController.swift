@@ -18,7 +18,7 @@ class BookmarksCellController: UITableViewCell {
         let bookmarkImage = UIImage(systemName: "bookmark.fill")
         let bookmarkButton = UIButton(type: .system)
         bookmarkButton.setImage(bookmarkImage, for: .normal)
-        bookmarkButton.tintColor = .white
+        bookmarkButton.tintColor = UIColor(red: 0.52, green: 0.07, blue: 0.07, alpha: 1.00)
         bookmarkButton.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
         accessoryView = bookmarkButton
         

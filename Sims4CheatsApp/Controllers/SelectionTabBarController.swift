@@ -7,26 +7,37 @@
 
 import UIKit
 
-class SelectionTabBarController: UITabBarController, SendBookmarksToTabController {
+// add SendBookmarksToTabController to SelctionTabBarController class
+// IGNORE ^^
+
+class SelectionTabBarController: UITabBarController {
     
     
     var favorites: [Cheat] = []
-    let featuredVC = FeaturedViewController()
-    let bookmarksController = BookmarksTableViewController()
+
+    
+// IGNORE THESE DELEGATES
+    
+//    var featuredVC: FeaturedViewController? {
+//        return self.viewControllers?.first as? FeaturedViewController
+//    }
+//    var bookmarksController: BookmarksTableViewController? {
+//        return (self.viewControllers?[2] as? UINavigationController)?.viewControllers.first as? BookmarksTableViewController
+//    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+//        featuredVC?.transferBookmarksDelegate = self
     }
     
     
-    func shareBookmarks(bookmarks: [Cheat]) {
-        favorites = bookmarks
-        print("\(favorites)")
-        bookmarksController.bookmarks = favorites
-    }
+//    func shareBookmarks(bookmarks: [Cheat]) {
+//        favorites = bookmarks
+//
+//        bookmarksController?.bookmarks = favorites
+//    }
 
     /*
     // MARK: - Navigation
